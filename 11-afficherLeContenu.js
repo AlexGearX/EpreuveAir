@@ -1,11 +1,8 @@
 var myArgs = process.argv.slice(2);
-var filePath = "";
 var fs = require("fs");
 if (myArgs.length != 1) {
     Error();
 }
-filePath = __filename + "\\" + myArgs[0];
-console.log(filePath);
 
 // Asynchronous read
 fs.readFile(myArgs[0], function (err, data) {
